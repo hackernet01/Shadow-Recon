@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowRecon | HackerNet</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-green-400 font-mono">
+  <div class="min-h-screen flex flex-col items-center justify-center">
+    <h1 class="text-4xl font-bold mb-8">ShadowRecon <span class="text-red-500">by HackerNet</span></h1>
+    <form action="/api/scan" method="POST" class="bg-gray-900 p-6 rounded-xl shadow-lg w-full max-w-md">
+      <label for="inputType" class="block mb-2">Select Type:</label>
+      <select name="type" id="inputType" class="mb-4 w-full p-2 rounded bg-gray-800 border border-green-500">
+        <option value="username">Username</option>
+        <option value="ip">IP Address</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone Number</option>
+        <option value="domain">Domain</option>
+        <option value="url">URL</option>
+      </select>
+      <label for="inputValue" class="block mb-2">Enter Target:</label>
+      <input type="text" name="value" id="inputValue" class="w-full p-2 rounded bg-gray-800 border border-green-500 mb-6" placeholder="e.g. johndoe, 1.1.1.1, example.com" required>
+      <button type="submit" class="bg-green-600 hover:bg-green-700 text-black font-bold py-2 px-4 rounded w-full">Start Recon</button>
+    </form>
+    <footer class="mt-10 text-sm text-gray-600">Developed by <span class="text-red-500">HackerNet</span> 🪱</footer>
+  </div>
+</body>
+</html>
